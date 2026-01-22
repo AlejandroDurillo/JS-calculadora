@@ -1,0 +1,103 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background:#e9f7e9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family: Arial, sans-serif;
+  }
+
+
+header{
+    padding: 1rem;
+}
+
+
+  main{
+    flex:1;
+ }
+
+
+
+footer{
+    background-color:#f0fff0;
+    color:#3d6b5d
+ }
+
+  .contenedor{
+    background:#1f1f1f;
+    padding:20px;
+    border-radius:20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width:320px;
+  }
+  
+  
+  
+  .pantalla{
+    width: 100%;
+    height: 70px;
+    background: #000;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 2rem;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  
+  .numeros{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:10px;
+  }
+  
+  button{
+    height:55px;
+    border-radius:10px;
+    font-size:1.3rem;
+    background:#2f2f2f;
+    color:white;
+    cursor:pointer;
+    border:none;
+  }
+  
+  button:hover{
+    background:#3a3a3a;
+  }
+  
+  .gris{
+    background:#3a3a3a;
+  }
+  
+  .divi, .mult, .menos, .mas{
+    background:#4b5cff;
+  }
+  
+  .divi:hover, .mult:hover, .menos:hover, .mas:hover{
+    background:#3f50e0;
+  }
+  
+  .igual{
+    background:#ff9800;
+    color:#fff;
+  }
+  
+  .igual:hover{
+    background:#e68900;
+  }
+  
+  .cero{
+    grid-column: span 2;
+  }
+  
+  .grande{
+    grid-column: span 2;
+  }
+  
