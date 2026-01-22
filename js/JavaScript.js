@@ -18,18 +18,12 @@ document.addEventListener(DOMContentLoaded, () =>{
 
     var operacion1 = document.getElementById("numeros")
 
-    const btn_uno = document.getElementById("boton_uno");
 
-    if(btn_uno){
-        btn_uno.addEventListener("click", () => {
-            const texto = document.getElementById("");
-            texto.textContent = "1";
-            console.log("1");
-        });
+        switch(numero1){
+            case btn_uno:
+                pantalla.textContent = "1";
+                console.log("1");
 }
-                    
-
-
 
 
 
