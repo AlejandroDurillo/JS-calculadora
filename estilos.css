@@ -1,3 +1,9 @@
+@font-face {
+  font-family: Segment7Standard;
+  src: url(imagenes/G7_Segment_7a.ttf);
+}
+
+
 body{
     display: flex;
     flex-direction: column;
@@ -10,8 +16,16 @@ body{
   }
 
 
+
+  p{
+    font-family: Segment7Standard;
+    margin-top: 20px;
+  }
+
+
 header{
     padding: 1rem;
+     font-family: Segment7Standard;
 }
 
 

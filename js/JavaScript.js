@@ -3,32 +3,43 @@ const botones = document.querySelectorAll('button');
 
 botones.forEach(boton => {
     boton.addEventListener('click', () => {
-        const botonPulsado = boton.textContent;
+        const botonPulsado = boton.textContent.trim();
 
-        // 1. Botón C: Limpiar la pantalla por completo
+        
         if (boton.id === "C") {
             pantalla.textContent = "0";
-            return; // Salimos de la función para que no ejecute lo de abajo
+            return; 
         }
 
-        // 2. Botón Borrar (⌫): Borrar el último carácter
+       
         if (boton.id === "borrar") {
             if (pantalla.textContent.length === 1 || pantalla.textContent === "Error!") {
                 pantalla.textContent = "0";
             } else {
                 pantalla.textContent = pantalla.textContent.slice(0, -1);
             }
-            return;
+            return; 
         }
 
-        // 3. Lógica para escribir números
-        // Filtramos: Si no es un botón de operación especial, escribimos
-        if (boton.id !== "igual" && boton.id !== "CE" && !boton.classList.contains("gris")) {
-             if (pantalla.textContent === "0" || pantalla.textContent === "Error!") {
+       
+        if (botonPulsado === ".") {
+            if (!pantalla.textContent.includes(".")) {
+                pantalla.textContent += ".";
+            }
+            return; 
+        }
+
+        
+        if (!isNaN(botonPulsado) && botonPulsado !== "") {
+            if (pantalla.textContent === "0" || pantalla.textContent === "Error!") {
                 pantalla.textContent = botonPulsado;
             } else {
                 pantalla.textContent += botonPulsado;
             }
+            return; 
         }
+        
+        
+      
     });
 });
